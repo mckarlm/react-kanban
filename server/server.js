@@ -8,7 +8,7 @@ const server = express();
 
 server.use(bodyparser.json());
 
-server.use('/', routes);
+server.use('/api', routes);
 
 server.get('/', (req, res) => {
   res.send('wiggity woo');
