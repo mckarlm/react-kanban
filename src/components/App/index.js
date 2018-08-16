@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {connect} from 'react-redux'
+
+import { loadCards } from '../../actions';
 import './App.css';
 import MainHeader from '../MainHeader';
 import Column from '../Column';
+import CardList from '../CardList';
 
 // import components
 
@@ -11,7 +15,9 @@ class App extends Component {
     super(props);
 
     this.state = {
-      cards: []
+      cards: [
+        { title: 'wiggity', body: 'woo', priority_id: 1, status_id: 1, created_by: 2, assigned_to: 1}
+      ]
     };
   };
 
@@ -29,7 +35,7 @@ class App extends Component {
       <div className="absolute-container">
         <MainHeader />
         <div className="all-columns-container">
-          
+          <CardList cards={this.props.cards}/>
           <Column></Column>
           <Column></Column>
           <Column></Column>
@@ -39,4 +45,7 @@ class App extends Component {
   };
 };
 
+// const takeAction = state => {}
+
+// export default connect(takeAction, dispatcher)(App);
 export default App;

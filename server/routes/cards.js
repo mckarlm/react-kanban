@@ -27,7 +27,7 @@ router.route('/')
       priority_id: priority_id ? priority_id : null,
       status_id: status_id ? status_id : null,
       created_by: created_by ? created_by : null,
-      assigned_to = assigned_to ? assigned_to : null
+      assigned_to: assigned_to ? assigned_to : null
     };
 
     return new Card(card)
