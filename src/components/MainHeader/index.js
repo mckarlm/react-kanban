@@ -6,8 +6,9 @@ import './MainHeader.css';
 const MainHeader = props => {
 
   return (
-    <header className="absolute-header">
-      <h1 className="absolute-title">Subterranean Animism</h1>
+    <header className="main-header">
+      <h3 className="main-title">Subterranean Animism</h3>
+      <h3 className="new-task-button"> New Task +</h3>
     </header>
   );
 }

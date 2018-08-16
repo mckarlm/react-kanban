@@ -29,6 +29,7 @@ class App extends Component {
       <div className="absolute-container">
         <MainHeader />
         <div className="all-columns-container">
+          
           <Column></Column>
           <Column></Column>
           <Column></Column>
