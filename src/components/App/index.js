@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
+import MainHeader from '../MainHeader'
+
 // import components
 
 class App extends Component {
@@ -12,6 +14,7 @@ class App extends Component {
     };
   };
 
+  //
   componentDidMount() {
     axios.get('/api')
       .then(response => {
@@ -22,11 +25,14 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">wiggity</h1>
-        </header>
-        <h3>woo</h3>
+      <div className="absolute-container">
+        <MainHeader />
+        <div className="all-columns-container">
+          <div className="column-container">
+            <div className="column-header"></div>
+            <div className="card-container"></div>
+          </div>
+        </div>
       </div>
     );
   };
