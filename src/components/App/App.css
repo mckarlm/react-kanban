@@ -16,3 +16,8 @@
 }
 
 /* ===== everything else, sort later ===== */
+
+.all-columns-container {
+  display: flex;
+  justify-content: space-evenly;
+}

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
-import MainHeader from '../MainHeader'
+import MainHeader from '../MainHeader';
+import Column from '../Column';
 
 // import components
 
@@ -28,10 +29,9 @@ class App extends Component {
       <div className="absolute-container">
         <MainHeader />
         <div className="all-columns-container">
-          <div className="column-container">
-            <div className="column-header"></div>
-            <div className="card-container"></div>
-          </div>
+          <Column></Column>
+          <Column></Column>
+          <Column></Column>
         </div>
       </div>
     );
