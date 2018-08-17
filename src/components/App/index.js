@@ -1,3 +1,5 @@
+// ===== App index ===== //
+
 import React, { Component } from 'react';
 import axios from 'axios';
 import {connect} from 'react-redux'
@@ -7,6 +9,7 @@ import './App.css';
 import MainHeader from '../MainHeader';
 import Column from '../Column';
 import CardList from '../CardList';
+import NewCardForm from '../NewCardForm';
 
 // import components
 
@@ -21,19 +24,16 @@ class App extends Component {
     };
   };
 
-  //
   componentDidMount() {
-    axios.get('/api')
-      .then(response => {
-        this.setState({ cards: response.data });
-      })
-      .catch(err => { console.log(err) });
+    this.props.loadCards();
   };
 
+// header body form
   render() {
     return (
       <div className="absolute-container">
         <MainHeader />
+        <NewCardForm />
         <div className="all-columns-container">
           <CardList cards={this.props.cards}/>
           <Column></Column>
@@ -45,7 +45,19 @@ class App extends Component {
   };
 };
 
-// const takeAction = state => {}
+const mapStateToProps = state => {
+  return {
+    cards: state.cardList
+  }
+}
 
-// export default connect(takeAction, dispatcher)(App);
-export default App;
+const mapDispatchToProps = dispatch => {
+  return {
+    loadCards: () => {
+      dispatch(loadCards())
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+// export default App;

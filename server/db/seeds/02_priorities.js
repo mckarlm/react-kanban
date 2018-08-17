@@ -12,18 +12,18 @@ exports.seed = function (knex, Promise) {
         },
         {
           id: 2,
-          priority_level: 'high',
+          priority_level: 'medium',
           rank: 2
         },
         {
           id: 3,
-          priority_level: 'medium',
-          rank: 1
+          priority_level: 'high',
+          rank: 3
         },
         {
           id: 4,
-          priority_level: 'high',
-          rank: 1
+          priority_level: 'urgent',
+          rank: 4
         }
       ]);
     });

@@ -7,13 +7,13 @@ const CardList = props => {
     <ul>
       <ul>Testing Card List</ul>
       {
-        props.cards.map((card, idx)=>{
+        props.cards.map((card, idx) => {
           return <CardListItem
-            key={ idx } 
+            key={idx}
             title={card.title}
             body={card.body}
-            priority={card.priority_id}
-            status={card.status_id}
+            priority_id={card.priority_id}
+            status_id={card.status_id}
             created_by={card.created_by}
             assigned_to={card.assigned_to}
           />

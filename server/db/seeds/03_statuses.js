@@ -7,23 +7,18 @@ exports.seed = function (knex, Promise) {
       return knex('statuses').insert([
         {
           id: 1,
-          current_status: 'in progress',
-          rank: 2
+          current_status: 'queue',
+          rank: 1
         },
         {
           id: 2,
-          current_status: 'done',
+          current_status: 'working',
           rank: 2
         },
         {
           id: 3,
           current_status: 'done',
-          rank: 1
-        },
-        {
-          id: 4,
-          current_status: 'in progress',
-          rank: 1
+          rank: 3
         }
       ]);
     });

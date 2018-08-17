@@ -2,6 +2,7 @@
 
 import React from 'react';
 import './Column.css';
+import CardList from '../CardList';
 
 const Column = props => {
 
@@ -9,7 +10,7 @@ const Column = props => {
     <div className="column-container">
       Stage 2 - Column Container
       <div className="column-header">Stage 3 - Column's Header</div>
-      <div className="card-container">Stage 4 - Cards' Container, cards go here btw</div>
+      <div className="card-container">xx</div>
     </div>
   );
 }
